@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # فقط clone بدون make
-RUN git clone https://github.com/Qalander/KeyHunt-Cuda.git /opt/KeyHunt-Cuda
+RUN git clone https://github.com/albertobsd/keyhunt.git /opt/KeyHunt-Cuda
 
 RUN mkdir -p /workspace/logs /workspace/results /opt/puzzle71
 
