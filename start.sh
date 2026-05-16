@@ -249,13 +249,14 @@ def kill_keyhunt():
 def start_keyhunt(start, end):
     # بناء GPU IDs للـ KeyHunt (--gpui 0,1,...)
     cmd = (
-        f'/opt/KeyHunt-Cuda/KeyHunt-Cuda '
-        f'-t 0 -g --gpui {GPU_IDS} '
-        f'-m address --coin BTC --comp '
-        f'--range {start}:{end} '
-        f'-f {HASH160_FILE} '
-        f'-o {RESULT} '
-        f'>> {LOG} 2>&1'
+    f'/opt/KeyHunt-Cuda/keyhunt '
+    f'-m bsgs '
+    f'-f {HASH160_FILE} '
+    f'-r {start}:{end} '
+    f'-R -q '
+    f'-o {RESULT} '
+    f'>> {LOG} 2>&1'
+)
     )
     subprocess.Popen(cmd, shell=True, start_new_session=True)
     log(f"KeyHunt بدأ: {start} → {end}")
