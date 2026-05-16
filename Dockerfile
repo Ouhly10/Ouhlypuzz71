@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/phrutis/KeyHunt-Cuda.git /opt/KeyHunt-Cuda
+RUN git clone https://github.com/manyunya/KeyHunt-Cuda.git /opt/KeyHunt-Cuda
 
 RUN mkdir -p /workspace/logs /workspace/results /opt/puzzle71
 
