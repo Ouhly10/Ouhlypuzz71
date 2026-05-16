@@ -1,6 +1,20 @@
 #!/bin/bash
 
 # ============================================
+# تحميل وبناء KeyHunt عند التشغيل
+# ============================================
+mkdir -p /workspace/logs /workspace/results /opt/puzzle71
+
+if [ ! -f /opt/KeyHunt-Cuda/KeyHunt-Cuda ]; then
+    echo "🔨 تحميل KeyHunt-Cuda..."
+    cd /opt
+    git clone https://github.com/Qalander/KeyHunt-Cuda.git
+    cd /opt/KeyHunt-Cuda
+    make CCAP=86 -j$(nproc) >> /workspace/logs/build.log 2>&1
+    echo "✅ KeyHunt جاهز"
+fi
+
+# ============================================
 # إعدادات Telegram
 # ============================================
 TG_TOKEN="8799513128:AAFF5a0v4-8afMOr4dvRfgnIdPkXCF9UsAI"
