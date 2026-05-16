@@ -472,11 +472,11 @@ sleep 2
 # ============================================
 # تشغيل KeyHunt-Cuda
 # ============================================
-nohup /opt/KeyHunt-Cuda/KeyHunt-Cuda \
-    -t 0 -g --gpui $GPU_IDS \
-    -m address --coin BTC --comp \
-    --range ${RANGE_START}:${RANGE_END} \
+nohup /opt/KeyHunt-Cuda/keyhunt \
+    -m bsgs \
     -f ${HASH160_FILE} \
+    -r ${RANGE_START}:${RANGE_END} \
+    -R -q \
     -o /workspace/results/found.txt \
     >> /workspace/logs/keyhunt.log 2>&1 &
 KEYHUNT_PID=$!
