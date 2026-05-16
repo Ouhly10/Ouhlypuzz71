@@ -10,7 +10,7 @@ TG_CHAT="${TG_CHAT:-YOUR_CHAT_ID_HERE}"
 # ============================================
 # العنوان المستهدف - لغز 71
 # ============================================
-TARGET="${TARGET:-1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU}"
+TARGET="${TARGET:-18UTuDTkcmCGhfYfETMzBYLvXrDis4qYvs}"
 
 # ============================================
 # مدة كل نطاق بالثواني
